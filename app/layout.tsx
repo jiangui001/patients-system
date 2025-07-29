@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
 import {
   Box,
   CssBaseline,
@@ -45,7 +47,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex">
+        <Box className="flex">
           <CssBaseline />
 
           <Header />
@@ -77,11 +79,11 @@ export default function RootLayout({
             </Box>
           </Drawer>
 
-          <div className="flex-1">
+          <Box className="flex-1">
             <Toolbar />
             {children}
-          </div>
-        </div>
+          </Box>
+        </Box>
       </body>
     </html>
   );

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///Users/jane-m4/development/patient-system/components/Header.tsx"],"sourcesContent":["\"use client\";\nimport { AppBar, Toolbar, Typography } from \"@mui/material\";\n\nconst Header = () => {\n  return (\n    <AppBar\n      position=\"fixed\"\n      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}\n    >\n      <Toolbar>\n        <Typography variant=\"h6\" noWrap component=\"div\">\n          医疗康复治疗管理系统\n        </Typography>\n      </Toolbar>\n    </AppBar>\n  );\n};\nexport default Header;\n"],"names":[],"mappings":";;;;AACA;AAAA;AAAA;AADA;;;AAGA,MAAM,SAAS;IACb,qBACE,6WAAC,kZAAA,CAAA,SAAM;QACL,UAAS;QACT,IAAI;YAAE,QAAQ,CAAC,QAAU,MAAM,MAAM,CAAC,MAAM,GAAG;QAAE;kBAEjD,cAAA,6WAAC,qZAAA,CAAA,UAAO;sBACN,cAAA,6WAAC,8ZAAA,CAAA,aAAU;gBAAC,SAAQ;gBAAK,MAAM;gBAAC,WAAU;0BAAM;;;;;;;;;;;;;;;;AAMxD;uCACe","debugId":null}}]
+}
