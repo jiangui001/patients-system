@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import {
   Box,
   CssBaseline,
-  AppBar,
   Toolbar,
-  Typography,
   Drawer,
   List,
   ListItem,
@@ -17,8 +14,7 @@ import {
 } from "@mui/material";
 
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import Header from "@/components/Header";
+import Header from "../components/Header";
 
 const drawerWidth = 240;
 

@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/patients/route": "/api/patients",
+  "/api/patients/edit/route": "/api/patients/edit",
+  "/assessment/page": "/assessment",
+  "/page": "/",
+  "/patients/[id]/page": "/patients/[id]",
+  "/patients/page": "/patients"
+}
