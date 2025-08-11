@@ -47,43 +47,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Box className="flex">
-          <CssBaseline />
-
-          <Header />
-
-          <Drawer
-            variant="permanent"
-            sx={{
-              width: drawerWidth,
-              flexShrink: 0,
-              [`& .MuiDrawer-paper`]: {
-                width: drawerWidth,
-                boxSizing: "border-box",
-              },
-            }}
-          >
-            <Toolbar />
-            <Box sx={{ overflow: "auto" }}>
-              <List>
-                {navData.map((item, index) => (
-                  <ListItem key={index} disablePadding>
-                    <ListItemButton component="a" href={item.href}>
-                      <ListItemIcon>{item.icon}</ListItemIcon>
-                      <ListItemText primary={item.label}></ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                ))}
-              </List>
-              <Divider />
-            </Box>
-          </Drawer>
-
-          <Box className="flex-1">
-            <Toolbar />
-            {children}
-          </Box>
-        </Box>
+        {children}
       </body>
     </html>
   );
