@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Dialog,
@@ -11,6 +12,7 @@ import {
   Avatar,
   Grid,
 } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 type PatientInfo = {
   姓名: string;
@@ -48,6 +50,7 @@ export default function PatientTransferDialog({
   medicalHistory,
   transferDetail,
 }: Props) {
+  const router = useRouter();
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
       <DialogTitle>患者接送详情</DialogTitle>
@@ -75,7 +78,16 @@ export default function PatientTransferDialog({
             <Avatar
               src={patientInfo.photoUrl}
               alt={patientInfo.姓名}
-              sx={{ width: 120, height: 120, boxShadow: 2 }}
+              imgProps={{
+                style: {
+                  objectFit: "contain",
+                },
+              }}
+              sx={{
+                width: 120,
+                height: 120,
+                boxShadow: 2,
+              }}
             />
           </Grid>
         </Grid>
@@ -106,7 +118,12 @@ export default function PatientTransferDialog({
         <Button onClick={onClose} variant="contained">
           患者详情
         </Button>
-        <Button onClick={onClose} variant="contained">
+        <Button
+          onClick={() => {
+            router.push("/patient-archive-update");
+          }}
+          variant="contained"
+        >
           确定接收
         </Button>
       </DialogActions>

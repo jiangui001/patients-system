@@ -24,7 +24,7 @@ export default function PatientArchiveUpdate() {
     年龄: 65,
     爱好: "唱歌、手工",
     家庭情况: "育有一子一女，女儿街道办工作人员，儿子外出务工",
-    photoUrl: "/avatar.png",
+    photoUrl: "/avatars/avatars.png",
   });
 
   const [medicalHistory, setMedicalHistory] = useState({
@@ -35,7 +35,7 @@ export default function PatientArchiveUpdate() {
   });
 
   const [transferDetail, setTransferDetail] = useState({
-    接送时间: "2025-08-18 10:00",
+    接送时间: "2025-08-20",
     接送人员: "治疗师小玉",
     接送方式: "自行前往",
   });
@@ -148,6 +148,11 @@ export default function PatientArchiveUpdate() {
                 src={patientInfo.photoUrl}
                 alt={patientInfo.姓名}
                 sx={{ width: 120, height: 120, boxShadow: 2 }}
+                imgProps={{
+                  style: {
+                    objectFit: "contain",
+                  },
+                }}
               />
             </Grid>
           </Grid>

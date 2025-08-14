@@ -33,13 +33,21 @@ export default function AssessmentPage() {
                 alignItems: "center",
               }}
             >
-              <Avatar sx={{ width: 56, height: 56, mr: 2 }} />
+              <Avatar
+                sx={{ width: 56, height: 56, mr: 2 }}
+                src="/avatars/avatars.png"
+                imgProps={{
+                  style: {
+                    objectFit: "contain",
+                  },
+                }}
+              />
               <Box>
                 <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                  张桂花患者康复综合评估表
+                  张某患者康复综合评估表
                 </Typography>
                 <Typography variant="body2">
-                  姓名：张桂花　年龄：55　诊断：脑出血
+                  姓名：张某　年龄：65　诊断：脑出血
                 </Typography>
               </Box>
             </Box>
@@ -52,7 +60,7 @@ export default function AssessmentPage() {
                     variant="subtitle1"
                     sx={{ fontWeight: 700, mb: 2 }}
                   >
-                    Berg平衡评定
+                    Berg平衡量表
                   </Typography>
                   <FormControlLabel
                     control={<Checkbox checked />}
@@ -80,7 +88,35 @@ export default function AssessmentPage() {
                   />
                   <FormControlLabel
                     control={<Checkbox checked />}
-                    label="转移"
+                    label="无支持闭目站立"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="双脚并拢无支持站立"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="站立时上肢向前上举"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="站立转身向后看"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="转身360°"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="上台阶"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="双足前后站立"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="单足站立"
                   />
                 </Paper>
               </Grid>
@@ -91,16 +127,19 @@ export default function AssessmentPage() {
                     variant="subtitle1"
                     sx={{ fontWeight: 700, mb: 2 }}
                   >
-                    手功能评估
+                    偏瘫手功能评估
                   </Typography>
                   <FormControlLabel
                     control={<Checkbox checked />}
-                    label="患手剪指甲"
+                    label="剪纸"
                   />
-                  <FormControlLabel control={<Checkbox />} label="患手拧瓶" />
-                  <FormControlLabel control={<Checkbox />} label="患手拿硬币" />
-                  <FormControlLabel control={<Checkbox />} label="患手拿10s" />
-                  <FormControlLabel control={<Checkbox />} label="患手抓球子" />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="取硬币"
+                  />
+                  <FormControlLabel control={<Checkbox />} label="撑伞10秒" />
+                  <FormControlLabel control={<Checkbox />} label="剪指甲" />
+                  <FormControlLabel control={<Checkbox />} label="系纽扣" />
                 </Paper>
               </Grid>
               {/* 认知测评 */}
@@ -112,15 +151,20 @@ export default function AssessmentPage() {
                   >
                     认知测评
                   </Typography>
-                  <Typography variant="body2" sx={{ mb: 1 }}>
-                    注意力（评定：完成）
-                  </Typography>
-                  <Typography variant="body2" sx={{ mb: 1 }}>
-                    计算力（评定：完成）
-                  </Typography>
-                  <Typography variant="body2">
-                    视觉空间（评定：完成）
-                  </Typography>
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="定向力"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="计算力"
+                  />
+                  <FormControlLabel control={<Checkbox />} label="记忆力" />
+                  <FormControlLabel control={<Checkbox />} label="视空间能力" />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="言语能力"
+                  />
                 </Paper>
               </Grid>
             </Grid>

@@ -34,13 +34,13 @@ const Header = () => {
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"
-              aria-label="show 17 new notifications"
+              aria-label="show 1 new notifications"
               color="inherit"
               onClick={() => {
                 setOpenTransferDialog(true);
               }}
             >
-              <Badge badgeContent={17} color="error">
+              <Badge badgeContent={1} color="error">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
@@ -62,24 +62,24 @@ const Header = () => {
       <PatientTransferDialog
         open={openTransferDialog}
         patientInfo={{
-          姓名: "张三",
-          性别: "男",
-          年龄: 30,
+          姓名: "张某",
+          性别: "女",
+          年龄: 65,
           爱好: "唱歌、手工",
           家庭情况: "育有一子一女，女儿街道办工作人员，儿子外出务工",
           photoUrl: "/avatars/avatars.png",
         }}
         medicalHistory={{
           现病史:
-            "1月前患者情绪激动后突感右侧肢体无力、伴头是，临床诊断为脑出血。",
+            "2月前患者情绪激动后突感右侧肢体无力、伴头是，临床诊断为脑出血。",
           既往病史: "高血压病史10余年，未规律丢服药。",
           功能情况:
-            "肌张力正常；Brunnstrom分期上肢V期，手IV期，下肢V期；berg评分48分，平衡功能良好；日常生活评拽作分90分，基础性日常生活自理能力良好。",
+            "肌张力正常；Brunnstrom分期上肢V期，手IV期，下肢V期；berg评分48分，平衡功能良好；日常生活活动能力评分90分，基础性日常生活自理能力良好。",
         }}
         transferDetail={{
-          接送时间: "2023-09-01 10:00",
-          接送人员: "李四",
-          接送方式: "私家车",
+          接送时间: "2025-08-20",
+          接送人员: "治疗师小玉",
+          接送方式: "自行前往",
         }}
         onClose={() => setOpenTransferDialog(false)}
       />

@@ -12,7 +12,7 @@ import {
 
 export default function RecoveryAdvice() {
   const [advice, setAdvice] = useState(
-    "1. 保持规律服药，监测血压。\n2. 建议每日进行上肢、手部、下肢康复训练。\n3. 适当进行唱歌、手工等兴趣活动，丰富生活。\n4. 注意情绪管理，避免激动。\n5. 家属协助日常生活，鼓励自理。\n6. 定期复诊，关注功能恢复。"
+    "1. 关注患侧手部精细活动，适当结合患者兴趣爱好，采用手工活动。\n2. 针对认知功能下降问题，关注记忆和视空间能力。\n3. 结合智能设备，提升训练反馈。\n4. 将日常生活场景适当迁移，融入训练。\n5. 规律监测血压，遵医嘱服药，避免情绪激动和过度劳累。\n6. 定期复诊，动态评估功能恢复情况，及时调整康复计划。"
   );
 
   const handleSave = () => {
@@ -23,7 +23,7 @@ export default function RecoveryAdvice() {
   return (
     <Box sx={{ p: 4, maxWidth: 700, mx: "auto" }}>
       <Typography variant="h4" gutterBottom>
-        张某某康复建议
+        张某康复建议
       </Typography>
       <Card>
         <CardContent>

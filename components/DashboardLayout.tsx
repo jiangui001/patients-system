@@ -39,8 +39,8 @@ export const metadata: Metadata = {
 const navData = [
   { label: "风险分类", href: "/risk-classification", icon: <EmergencyIcon /> },
   { label: "档案更新", href: "/patient-archive-update", icon: <ArchiveIcon /> },
-  { label: "个体方案", href: "/patients", icon: <InboxIcon /> },
-  { label: "回访记录", href: "/patients", icon: <InboxIcon /> },
+  { label: "个体方案", href: "/assessment", icon: <InboxIcon /> },
+  // { label: "回访记录", href: "/patients", icon: <InboxIcon /> },
   { label: "患者列表", href: "/patients", icon: <InboxIcon /> },
 ];
 
