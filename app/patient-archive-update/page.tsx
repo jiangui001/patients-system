@@ -12,13 +12,15 @@ import {
   Stack,
 } from "@mui/material";
 import PatientTransferDialog from "../../components/PatientTransferDialog";
+import { useRouter } from "next/navigation";
 
 export default function PatientArchiveUpdate() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   const [patientInfo, setPatientInfo] = useState({
-    姓名: "张三",
-    性别: "男",
+    姓名: "张某",
+    性别: "女",
     年龄: 65,
     爱好: "唱歌、手工",
     家庭情况: "育有一子一女，女儿街道办工作人员，儿子外出务工",
@@ -26,16 +28,16 @@ export default function PatientArchiveUpdate() {
   });
 
   const [medicalHistory, setMedicalHistory] = useState({
-    现病史: "1月前患者情绪激动后突感右侧肢体无力、伴头是，临床诊断为脑出血。",
+    现病史: "2月前患者情绪激动后突感右侧肢体无力、伴头是，临床诊断为脑出血。",
     既往病史: "高血压病史10余年，未规律丢服药。",
     功能情况:
-      "肌张力正常；Brunnstrom分期上肢V期，手IV期，下肢V期；berg评分48分，平衡功能良好；日常生活评拽作分90分，基础性日常生活自理",
+      "肌张力正常；Brunnstrom分期上肢V期，手IV期，下肢V期；berg评分48分，平衡功能良好；日常生活活动能力评分90分，基础性日常生活自理能力良好。",
   });
 
   const [transferDetail, setTransferDetail] = useState({
-    接送时间: "2025-08-12 09:30",
-    接送人员: "王护士",
-    接送方式: "救护车",
+    接送时间: "2025-08-18 10:00",
+    接送人员: "治疗师小玉",
+    接送方式: "自行前往",
   });
 
   // 保存/暂存处理
@@ -44,10 +46,10 @@ export default function PatientArchiveUpdate() {
     alert("保存成功！");
   };
 
-  const handleTempSave = () => {
-    // TODO: 暂存到本地或后端
-    alert("已暂存！");
-  };
+  // const handleTempSave = () => {
+  //   // TODO: 暂存到本地或后端
+  //   alert("已暂存！");
+  // };
 
   // 通用输入处理
   const handleChange = (objSetter: any, obj: any, key: string, value: any) => {
@@ -248,11 +250,16 @@ export default function PatientArchiveUpdate() {
         <Button variant="contained" color="primary" onClick={handleSave}>
           保存
         </Button>
-        <Button variant="outlined" color="primary" onClick={handleTempSave}>
+        {/* <Button variant="outlined" color="primary" onClick={handleTempSave}>
           暂存
-        </Button>
-        <Button variant="contained" onClick={() => setOpen(true)}>
-          查看患者接送详情
+        </Button> */}
+        <Button
+          variant="contained"
+          onClick={() => {
+            router.push("/assessment");
+          }}
+        >
+          进入评估
         </Button>
       </Stack>
       <PatientTransferDialog

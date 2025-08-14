@@ -1,3 +1,4 @@
+"use client";
 import {
   Grid,
   Paper,
@@ -9,13 +10,16 @@ import {
   FormControlLabel,
   Divider,
 } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 export default function AssessmentPage() {
+  const router = useRouter();
+
   return (
-    <Box sx={{ bgcolor: "#f5f7fa", minHeight: "100vh", py: 6 }}>
-      <Grid container justifyContent="center">
+    <Box sx={{ bgcolor: "#f5f7fa", minHeight: "100vh" }}>
+      <Grid justifyContent="center">
         <Grid size={{ xs: 12, md: 10 }}>
-          <Paper sx={{ p: 4, borderRadius: 3, boxShadow: 4 }}>
+          <Paper sx={{ p: 4, borderRadius: 0, boxShadow: 0 }}>
             {/* 顶部标题栏 */}
             <Box
               sx={{
@@ -52,14 +56,32 @@ export default function AssessmentPage() {
                   </Typography>
                   <FormControlLabel
                     control={<Checkbox checked />}
-                    label="站位站稳"
+                    label="由坐到站"
                   />
                   <FormControlLabel
-                    control={<Checkbox />}
-                    label="立位换向自稳"
+                    control={<Checkbox checked />}
+                    label="独立站立"
                   />
-                  <FormControlLabel control={<Checkbox />} label="转身360°" />
-                  <FormControlLabel control={<Checkbox />} label="单脚站立" />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="无靠背坐"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="双足着地"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="从站到坐"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="转移"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox checked />}
+                    label="转移"
+                  />
                 </Paper>
               </Grid>
               {/* 手功能评估 */}
@@ -109,15 +131,11 @@ export default function AssessmentPage() {
                 variant="outlined"
                 color="primary"
                 sx={{ fontWeight: 700 }}
+                onClick={() => {
+                  router.push("/recovery-advice", { scroll: false });
+                }}
               >
-                保存评估
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{ fontWeight: 700 }}
-              >
-                连接上级
+                生成康复方案
               </Button>
             </Box>
           </Paper>
